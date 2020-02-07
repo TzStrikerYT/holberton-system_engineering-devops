@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#only fizzbuzz my dad
 for i in {1..100}; do
     op3=$((i % 3))
     op5=$((i % 5))
