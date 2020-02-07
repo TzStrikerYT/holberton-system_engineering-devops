@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+i=0
+while [ $i -lt 10 ]; do
+    if [ $i == 8 ]; then
+	echo "good luck"
+    fi
+
+    if [ $i == 4 ]; then
+        echo "bad luck"
+    else
+	echo "Holberton School"
+    fi
+    (( i++ ))
+done

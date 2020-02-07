@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+i=0
+while [ $i -lt 10 ]; do
+    if [ $i -ne 8 ]; then
+	echo "Holberton School"
+    else
+	echo "Hi"
+    fi
+    (( i++ ))
+done

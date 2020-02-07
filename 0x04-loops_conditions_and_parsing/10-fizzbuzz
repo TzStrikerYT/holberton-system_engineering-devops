@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+for i in {1..100}; do
+    op3=$((i % 3))
+    op5=$((i % 5))
+    if [ $op3 -eq 0 ] && [ $op5 -eq 0 ]; then
+	echo "FizzBuzz"
+    elif [ $op3 -eq 0 ]; then
+	echo "Fizz"
+    elif [ $op5 -eq 0 ]; then
+	echo "Buzz"
+    else
+	echo $i
+    fi
+done

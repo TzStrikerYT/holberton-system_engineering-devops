@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+for i in $(find ./* | cut -d '-' -f2 | tr -d "./"); do echo "$i" ; done
