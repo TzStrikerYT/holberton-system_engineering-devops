@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#i am the assasin m***fckr
+file="$(pgrep -f 7-highlander)"
+kill -9 "$file"

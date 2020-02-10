@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#dysplays my own pid :v
+echo $$
