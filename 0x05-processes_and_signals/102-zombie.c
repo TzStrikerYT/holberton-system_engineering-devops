@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * eternal - infinite loop
+ * infinite_while - infinite loop
  *
  * Return: 0
  */
