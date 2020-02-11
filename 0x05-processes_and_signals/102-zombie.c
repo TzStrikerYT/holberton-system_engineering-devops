@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-int eternal(void)
+int infinite_while(void)
 {
 	while (1)
 	{
@@ -24,6 +24,7 @@ int main(void)
 {
 	int i = 0;
 	pid_t son;
+
 	for (; i < 5; i++)
 	{
 		son = fork();
