@@ -27,7 +27,7 @@ int main(void)
 	{
 		son = fork();
 		if (son > 0)
-			printf("Zombie process created, PID: %u\n,", pid);
+			printf("Zombie process created, PID: %u\n,", son);
 		else
 			return (0);
 	}
