@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#process an PID file 
+#process an PID file
 trap "echo I hate the kill command; /var/run/holbertonscript.pid; exit" SIGTERM
 trap "echo Y U no love me?!" SIGINT
-trap "rm /var/run/holbertonscript.pid" SIGQUIT
+trap "rm /var/run/holbertonscript.pid; exit" SIGQUIT
 echo $$ > /var/run/holbertonscript.pid
 while :
 do
