@@ -35,6 +35,6 @@ int main(void)
 			return (0);
 		}
 	}
-	eternal();
+	infinite_while();
 	return (0);
 }
