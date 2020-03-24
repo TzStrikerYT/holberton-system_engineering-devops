@@ -1,6 +1,3 @@
-#creates a file
-
-package {'puppet-lint':
-  ensure   => '2.1.1',
-  provider => gem,
+#kill
+exec{ '/usr/bin/env pkill -9 killmenow':
 }
