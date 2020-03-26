@@ -1,0 +1,3 @@
+#!/usr/bin/apache2 start
+#fix container whith apache
+sudo service apache2 start
