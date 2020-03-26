@@ -3,6 +3,6 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-$new="server_name _;\\trewrite ^\/redirect_me https://www.youtube.com/watch?v=L3G1UX_eJV0&t=758s;"
-sed -i "s/server_name _;/$new/" /etc/nginx/sites-enabled/default
+new="server_name _;\\trewrite ^\/redirect_me https://www.youtube.com/watch?v=L3G1UX_eJV0&t=758s;"
+sudo sed -i "s/server_name _;/$new/" /etc/nginx/sites-enabled/default
 sudo service nginx start
