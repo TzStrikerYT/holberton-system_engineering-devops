@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #install nginx and redirect to CADO video
-sudo apt-get -y update
-sudo apt-get -y install nginx
+apt-get -y update
+apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo sed -i "server_name _;/ a\\\trewite ^/redirect_me https://www.youtube.com/watch?v=L3G1UX_eJV0&t=758s permanent;" /etc/nginx/sites-enabled/default
-sudo service nginx start
+sed -i "/server_name _;/ a\\\trewrite ^/redirect_me http://www.holbertonschool.com permanent;" /etc/nginx/sites-available/default
+service nginx start
