@@ -3,6 +3,6 @@
 new_string="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=L3G1UX_eJV0&t=758s;\n\t}\n"
 apt-get -y update
 apt-get -y install nginx
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sed -i "/server_name _;/ a\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=L3G1UX_eJV0&t=758s permanent;" /etc/nginx/sites-available/default
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "37a\ $new_string" /etc/nginx/sites-enabled/default
 service nginx start
