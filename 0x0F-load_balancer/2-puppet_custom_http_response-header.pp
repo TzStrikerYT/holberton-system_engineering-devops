@@ -10,7 +10,7 @@ exec { 'Instaler':
 }
 
 exec { 'add_http':
-  command  => '/usr/bin/env sudo sed -i "26i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf',
+  command  => '/usr/bin/env sudo sed -i "26i add_header X-Served-By \$HOSTNAME;" /etc/nginx/nginx.conf',
   provider => shell,
 }
 
