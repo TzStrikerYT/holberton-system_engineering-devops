@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #sets 8080
 sudo sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
-sudo pkill -1f "/usr/sbin/nginx"
+sudo pkill -1 -f "/usr/sbin/nginx"
