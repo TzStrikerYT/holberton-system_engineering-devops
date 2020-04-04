@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#configures haproxy
+CONF="\
+fronted striker_balancer
+    bind *:80
+    mode http
+    default_bakend striker
+
+backend striker
+    balance roundrobin
+    server 1264-web-01 35.229.101.127 check
+    server 1264-web-02 34.224.31.196 check
+"
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo echo "$CONF" >> /etc/haproxy.cfg
+sudo service haproxy start
