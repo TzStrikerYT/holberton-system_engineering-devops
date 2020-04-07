@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Print information
+info () {
+    RESULT=$(dig $2.$1 | grep -A1 "ANSWER SECTION:" | awk '{print $1" "$4" "$5}' | cut -d";" -f3)
+    IP=$(echo $RESULT | cut -d" " -f3)
+    RECORD=$(echo $RESULT | cut -d" " -f2)
+    echo "The subdomain $2 is a $RECORD record and points to $IP"
+}
+if [ $# -eq 1 ]; then
+    info "$1" "www"
+    info "$1" "lb-01"
+    info "$1" "web-01"
+    info "$1" "web-02"
+else
+    info "$1" "$2"
+fi
