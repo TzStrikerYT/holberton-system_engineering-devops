@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#run whoami under user passed how argument
+sudo -u "$1" whoami
