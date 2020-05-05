@@ -24,7 +24,7 @@ if __name__ == "__main__":
     all_l = []
 
     for task in all_t:
-        d_task["title"] = task.get("title")
+        d_task["task"] = task.get("title")
         d_task["completed"] = task.get("completed")
         d_task["username"] = username
         all_l.append(d_task.copy())
@@ -33,5 +33,5 @@ if __name__ == "__main__":
     dict[user_id] = all_l
     _file = argv[1] + ".json"
 
-    with open(_file, "w") as f:
+    with open(_file, "w", newline="") as f:
         json.dump(dict, f)
