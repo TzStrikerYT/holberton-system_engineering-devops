@@ -36,8 +36,6 @@ if __name__ == "__main__":
         if master.get(user_id) is not None:
             master.get(user_id).append(d_task.copy())
 
-    print(master)
-
     _file = "todo_all_employees.json"
     with open(_file, "w", newline="") as f:
         json.dump(master, f)
