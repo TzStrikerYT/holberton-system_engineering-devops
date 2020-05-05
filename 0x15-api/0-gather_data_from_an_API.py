@@ -8,8 +8,8 @@ if __name__ == "__main__":
 
     employee = requests.get("http://jsonplaceholder.typicode.com/users?id={}"
                             .format(argv[1]))
-    all_tks_user = requests.get("http://jsonplaceholder.typicode.com/todos?userId={}"
-                            .format(argv[1]))
+    all_tks_user = requests.get(
+        "http://jsonplaceholder.typicode.com/todos?userId={}".format(argv[1]))
     try:
         name = employee.json()
         all_t = all_tks_user.json()
