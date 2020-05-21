@@ -7,5 +7,5 @@ exec { '/bin/bash':
 
 service { 'apache2':
   ensure  => running,
-  restart => 'sudo service apache2 start',
+  restart => 'sudo service apache2 restart',
 }
