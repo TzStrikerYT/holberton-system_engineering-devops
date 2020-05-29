@@ -1,1 +1,3 @@
+#!/usr/bin/env bash
+#Elegant form to restart gunicorn call me elegant totuy
 sudo pkill -HUP gunicorn
